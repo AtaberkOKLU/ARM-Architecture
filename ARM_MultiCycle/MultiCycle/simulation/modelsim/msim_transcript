@@ -1,0 +1,471 @@
+# Reading pref.tcl
+# //  Questa Intel Starter FPGA Edition-64
+# //  Version 2021.2 win64 Apr 14 2021
+# //
+# //  Copyright 1991-2021 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# do MultiCycle_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Questa Intel Starter FPGA Edition-64 vmap 2021.2 Lib Mapping Utility 2021.04 Apr 14 2021
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/21.1/questa_fse/win64/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+D:/EE/EE446/Lab4/MultiCycle {D:/EE/EE446/Lab4/MultiCycle/MultiCycle.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 22:10:20 on Jun 05,2022
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/EE/EE446/Lab4/MultiCycle" D:/EE/EE446/Lab4/MultiCycle/MultiCycle.v 
+# -- Compiling module MultiCycle
+# 
+# Top level modules:
+# 	MultiCycle
+# End time: 22:10:20 on Jun 05,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/EE/EE446/Lab4/MultiCycle/Modules {D:/EE/EE446/Lab4/MultiCycle/Modules/MultiCycleController.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 22:10:20 on Jun 05,2022
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/EE/EE446/Lab4/MultiCycle/Modules" D:/EE/EE446/Lab4/MultiCycle/Modules/MultiCycleController.v 
+# -- Compiling module MultiCycleController
+# 
+# Top level modules:
+# 	MultiCycleController
+# End time: 22:10:20 on Jun 05,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/EE/EE446/Lab4/MultiCycle/Modules {D:/EE/EE446/Lab4/MultiCycle/Modules/Shifter.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 22:10:20 on Jun 05,2022
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/EE/EE446/Lab4/MultiCycle/Modules" D:/EE/EE446/Lab4/MultiCycle/Modules/Shifter.v 
+# -- Compiling module Shifter
+# 
+# Top level modules:
+# 	Shifter
+# End time: 22:10:21 on Jun 05,2022, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/EE/EE446/Lab4/MultiCycle/Modules {D:/EE/EE446/Lab4/MultiCycle/Modules/Reg_RWE.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 22:10:21 on Jun 05,2022
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/EE/EE446/Lab4/MultiCycle/Modules" D:/EE/EE446/Lab4/MultiCycle/Modules/Reg_RWE.v 
+# -- Compiling module Reg_RWE
+# 
+# Top level modules:
+# 	Reg_RWE
+# End time: 22:10:21 on Jun 05,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/EE/EE446/Lab4/MultiCycle/Modules {D:/EE/EE446/Lab4/MultiCycle/Modules/RegisterFile.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 22:10:21 on Jun 05,2022
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/EE/EE446/Lab4/MultiCycle/Modules" D:/EE/EE446/Lab4/MultiCycle/Modules/RegisterFile.v 
+# -- Compiling module RegisterFile
+# 
+# Top level modules:
+# 	RegisterFile
+# End time: 22:10:21 on Jun 05,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/EE/EE446/Lab4/MultiCycle/Modules {D:/EE/EE446/Lab4/MultiCycle/Modules/Mux4x1.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 22:10:21 on Jun 05,2022
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/EE/EE446/Lab4/MultiCycle/Modules" D:/EE/EE446/Lab4/MultiCycle/Modules/Mux4x1.v 
+# -- Compiling module Mux4x1
+# 
+# Top level modules:
+# 	Mux4x1
+# End time: 22:10:21 on Jun 05,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/EE/EE446/Lab4/MultiCycle/Modules {D:/EE/EE446/Lab4/MultiCycle/Modules/Mux2x1.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 22:10:21 on Jun 05,2022
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/EE/EE446/Lab4/MultiCycle/Modules" D:/EE/EE446/Lab4/MultiCycle/Modules/Mux2x1.v 
+# -- Compiling module Mux2x1
+# 
+# Top level modules:
+# 	Mux2x1
+# End time: 22:10:21 on Jun 05,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/EE/EE446/Lab4/MultiCycle/Modules {D:/EE/EE446/Lab4/MultiCycle/Modules/Mux16x1.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 22:10:21 on Jun 05,2022
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/EE/EE446/Lab4/MultiCycle/Modules" D:/EE/EE446/Lab4/MultiCycle/Modules/Mux16x1.v 
+# -- Compiling module Mux16x1
+# 
+# Top level modules:
+# 	Mux16x1
+# End time: 22:10:21 on Jun 05,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/EE/EE446/Lab4/MultiCycle/Modules {D:/EE/EE446/Lab4/MultiCycle/Modules/FullAdder_O.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 22:10:21 on Jun 05,2022
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/EE/EE446/Lab4/MultiCycle/Modules" D:/EE/EE446/Lab4/MultiCycle/Modules/FullAdder_O.v 
+# -- Compiling module FullAdder_O
+# 
+# Top level modules:
+# 	FullAdder_O
+# End time: 22:10:21 on Jun 05,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/EE/EE446/Lab4/MultiCycle/Modules {D:/EE/EE446/Lab4/MultiCycle/Modules/Extender.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 22:10:21 on Jun 05,2022
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/EE/EE446/Lab4/MultiCycle/Modules" D:/EE/EE446/Lab4/MultiCycle/Modules/Extender.v 
+# -- Compiling module Extender
+# 
+# Top level modules:
+# 	Extender
+# End time: 22:10:21 on Jun 05,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/EE/EE446/Lab4/MultiCycle/Modules {D:/EE/EE446/Lab4/MultiCycle/Modules/Decoder4x16_Cond.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 22:10:21 on Jun 05,2022
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/EE/EE446/Lab4/MultiCycle/Modules" D:/EE/EE446/Lab4/MultiCycle/Modules/Decoder4x16_Cond.v 
+# -- Compiling module Decoder4x16_Cond
+# 
+# Top level modules:
+# 	Decoder4x16_Cond
+# End time: 22:10:22 on Jun 05,2022, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/EE/EE446/Lab4/MultiCycle/Modules {D:/EE/EE446/Lab4/MultiCycle/Modules/ConstantValueGenerator.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 22:10:22 on Jun 05,2022
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/EE/EE446/Lab4/MultiCycle/Modules" D:/EE/EE446/Lab4/MultiCycle/Modules/ConstantValueGenerator.v 
+# -- Compiling module ConstantValueGenerator
+# 
+# Top level modules:
+# 	ConstantValueGenerator
+# End time: 22:10:22 on Jun 05,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/EE/EE446/Lab4/MultiCycle/Modules {D:/EE/EE446/Lab4/MultiCycle/Modules/ALU.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 22:10:22 on Jun 05,2022
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/EE/EE446/Lab4/MultiCycle/Modules" D:/EE/EE446/Lab4/MultiCycle/Modules/ALU.v 
+# -- Compiling module ALU
+# 
+# Top level modules:
+# 	ALU
+# End time: 22:10:22 on Jun 05,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/EE/EE446/Lab4/MultiCycle {D:/EE/EE446/Lab4/MultiCycle/MultiCycleMainFSM.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 22:10:22 on Jun 05,2022
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/EE/EE446/Lab4/MultiCycle" D:/EE/EE446/Lab4/MultiCycle/MultiCycleMainFSM.v 
+# -- Compiling module MultiCycleMainFSM
+# 
+# Top level modules:
+# 	MultiCycleMainFSM
+# End time: 22:10:22 on Jun 05,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/EE/EE446/Lab4/MultiCycle/Modules {D:/EE/EE446/Lab4/MultiCycle/Modules/SyncMemory.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 22:10:22 on Jun 05,2022
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/EE/EE446/Lab4/MultiCycle/Modules" D:/EE/EE446/Lab4/MultiCycle/Modules/SyncMemory.v 
+# -- Compiling module SyncMemory
+# 
+# Top level modules:
+# 	SyncMemory
+# End time: 22:10:22 on Jun 05,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -vlog01compat -work work +incdir+D:/EE/EE446/Lab4/MultiCycle {D:/EE/EE446/Lab4/MultiCycle/MultiCycle_tb.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 22:10:22 on Jun 05,2022
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/EE/EE446/Lab4/MultiCycle" D:/EE/EE446/Lab4/MultiCycle/MultiCycle_tb.v 
+# -- Compiling module MultiCycle_tb
+# 
+# Top level modules:
+# 	MultiCycle_tb
+# End time: 22:10:22 on Jun 05,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  MultiCycle_tb
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=""+acc"" MultiCycle_tb 
+# Start time: 22:10:22 on Jun 05,2022
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Note: (vopt-143) Recognized 1 FSM in module "MultiCycleMainFSM(fast)".
+# Loading work.MultiCycle_tb(fast)
+# Loading work.MultiCycle(fast)
+# Loading work.Reg_RWE(fast)
+# Loading work.MultiCycleController(fast)
+# Loading work.MultiCycleMainFSM(fast)
+# Loading work.Mux2x1(fast)
+# Loading work.Mux2x1(fast__1)
+# Loading work.Mux4x1(fast)
+# Loading work.ConstantValueGenerator(fast)
+# Loading work.ALU(fast)
+# Loading work.FullAdder_O(fast)
+# Loading work.Mux2x1(fast__2)
+# Loading work.Shifter(fast)
+# Loading work.ConstantValueGenerator(fast__1)
+# Loading work.ConstantValueGenerator(fast__2)
+# Loading work.RegisterFile(fast)
+# Loading work.Decoder4x16_Cond(fast)
+# Loading work.Mux16x1(fast)
+# Loading work.Extender(fast)
+# Loading work.Reg_RWE(fast__1)
+# Loading work.SyncMemory(fast)
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# e3a0001f
+# ** Note: $stop    : D:/EE/EE446/Lab4/MultiCycle/MultiCycle_tb.v(25)
+#    Time: 20 ps  Iteration: 0  Instance: /MultiCycle_tb
+# Break in Module MultiCycle_tb at D:/EE/EE446/Lab4/MultiCycle/MultiCycle_tb.v line 25
+run -continue
+# ** Note: $stop    : D:/EE/EE446/Lab4/MultiCycle/MultiCycle_tb.v(25)
+#    Time: 40 ps  Iteration: 0  Instance: /MultiCycle_tb
+# Break in Module MultiCycle_tb at D:/EE/EE446/Lab4/MultiCycle/MultiCycle_tb.v line 25
+run -continue
+# ** Note: $stop    : D:/EE/EE446/Lab4/MultiCycle/MultiCycle_tb.v(25)
+#    Time: 60 ps  Iteration: 0  Instance: /MultiCycle_tb
+# Break in Module MultiCycle_tb at D:/EE/EE446/Lab4/MultiCycle/MultiCycle_tb.v line 25
+run -continue
+# ** Note: $stop    : D:/EE/EE446/Lab4/MultiCycle/MultiCycle_tb.v(25)
+#    Time: 80 ps  Iteration: 0  Instance: /MultiCycle_tb
+# Break in Module MultiCycle_tb at D:/EE/EE446/Lab4/MultiCycle/MultiCycle_tb.v line 25
+run -continue
+# ** Note: $stop    : D:/EE/EE446/Lab4/MultiCycle/MultiCycle_tb.v(25)
+#    Time: 100 ps  Iteration: 0  Instance: /MultiCycle_tb
+# Break in Module MultiCycle_tb at D:/EE/EE446/Lab4/MultiCycle/MultiCycle_tb.v line 25
+run -continue
+# ** Note: $stop    : D:/EE/EE446/Lab4/MultiCycle/MultiCycle_tb.v(25)
+#    Time: 120 ps  Iteration: 0  Instance: /MultiCycle_tb
+# Break in Module MultiCycle_tb at D:/EE/EE446/Lab4/MultiCycle/MultiCycle_tb.v line 25
+run -continue
+# ** Note: $stop    : D:/EE/EE446/Lab4/MultiCycle/MultiCycle_tb.v(25)
+#    Time: 140 ps  Iteration: 0  Instance: /MultiCycle_tb
+# Break in Module MultiCycle_tb at D:/EE/EE446/Lab4/MultiCycle/MultiCycle_tb.v line 25
+run -continue
+# ** Note: $stop    : D:/EE/EE446/Lab4/MultiCycle/MultiCycle_tb.v(25)
+#    Time: 160 ps  Iteration: 0  Instance: /MultiCycle_tb
+# Break in Module MultiCycle_tb at D:/EE/EE446/Lab4/MultiCycle/MultiCycle_tb.v line 25
+run -continue
+# ** Note: $stop    : D:/EE/EE446/Lab4/MultiCycle/MultiCycle_tb.v(25)
+#    Time: 180 ps  Iteration: 0  Instance: /MultiCycle_tb
+# Break in Module MultiCycle_tb at D:/EE/EE446/Lab4/MultiCycle/MultiCycle_tb.v line 25
+run -continue
+# ** Note: $stop    : D:/EE/EE446/Lab4/MultiCycle/MultiCycle_tb.v(25)
+#    Time: 200 ps  Iteration: 0  Instance: /MultiCycle_tb
+# Break in Module MultiCycle_tb at D:/EE/EE446/Lab4/MultiCycle/MultiCycle_tb.v line 25
+run -continue
+# ** Note: $stop    : D:/EE/EE446/Lab4/MultiCycle/MultiCycle_tb.v(25)
+#    Time: 220 ps  Iteration: 0  Instance: /MultiCycle_tb
+# Break in Module MultiCycle_tb at D:/EE/EE446/Lab4/MultiCycle/MultiCycle_tb.v line 25
+run -continue
+# ** Note: $stop    : D:/EE/EE446/Lab4/MultiCycle/MultiCycle_tb.v(25)
+#    Time: 240 ps  Iteration: 0  Instance: /MultiCycle_tb
+# Break in Module MultiCycle_tb at D:/EE/EE446/Lab4/MultiCycle/MultiCycle_tb.v line 25
+run -continue
+# ** Note: $stop    : D:/EE/EE446/Lab4/MultiCycle/MultiCycle_tb.v(25)
+#    Time: 260 ps  Iteration: 0  Instance: /MultiCycle_tb
+# Break in Module MultiCycle_tb at D:/EE/EE446/Lab4/MultiCycle/MultiCycle_tb.v line 25
+run -continue
+# ** Note: $stop    : D:/EE/EE446/Lab4/MultiCycle/MultiCycle_tb.v(25)
+#    Time: 280 ps  Iteration: 0  Instance: /MultiCycle_tb
+# Break in Module MultiCycle_tb at D:/EE/EE446/Lab4/MultiCycle/MultiCycle_tb.v line 25
+run -continue
+# ** Note: $stop    : D:/EE/EE446/Lab4/MultiCycle/MultiCycle_tb.v(25)
+#    Time: 300 ps  Iteration: 0  Instance: /MultiCycle_tb
+# Break in Module MultiCycle_tb at D:/EE/EE446/Lab4/MultiCycle/MultiCycle_tb.v line 25
+run -continue
+# ** Note: $stop    : D:/EE/EE446/Lab4/MultiCycle/MultiCycle_tb.v(25)
+#    Time: 320 ps  Iteration: 0  Instance: /MultiCycle_tb
+# Break in Module MultiCycle_tb at D:/EE/EE446/Lab4/MultiCycle/MultiCycle_tb.v line 25
+run -continue
+# ** Note: $stop    : D:/EE/EE446/Lab4/MultiCycle/MultiCycle_tb.v(25)
+#    Time: 340 ps  Iteration: 0  Instance: /MultiCycle_tb
+# Break in Module MultiCycle_tb at D:/EE/EE446/Lab4/MultiCycle/MultiCycle_tb.v line 25
+run -continue
+# ** Note: $stop    : D:/EE/EE446/Lab4/MultiCycle/MultiCycle_tb.v(25)
+#    Time: 360 ps  Iteration: 0  Instance: /MultiCycle_tb
+# Break in Module MultiCycle_tb at D:/EE/EE446/Lab4/MultiCycle/MultiCycle_tb.v line 25
+run -continue
+# ** Note: $stop    : D:/EE/EE446/Lab4/MultiCycle/MultiCycle_tb.v(25)
+#    Time: 380 ps  Iteration: 0  Instance: /MultiCycle_tb
+# Break in Module MultiCycle_tb at D:/EE/EE446/Lab4/MultiCycle/MultiCycle_tb.v line 25
+run -continue
+# ** Note: $stop    : D:/EE/EE446/Lab4/MultiCycle/MultiCycle_tb.v(25)
+#    Time: 400 ps  Iteration: 0  Instance: /MultiCycle_tb
+# Break in Module MultiCycle_tb at D:/EE/EE446/Lab4/MultiCycle/MultiCycle_tb.v line 25
+run -continue
+# ** Note: $stop    : D:/EE/EE446/Lab4/MultiCycle/MultiCycle_tb.v(25)
+#    Time: 420 ps  Iteration: 0  Instance: /MultiCycle_tb
+# Break in Module MultiCycle_tb at D:/EE/EE446/Lab4/MultiCycle/MultiCycle_tb.v line 25
+run -continue
+# ** Note: $stop    : D:/EE/EE446/Lab4/MultiCycle/MultiCycle_tb.v(25)
+#    Time: 440 ps  Iteration: 0  Instance: /MultiCycle_tb
+# Break in Module MultiCycle_tb at D:/EE/EE446/Lab4/MultiCycle/MultiCycle_tb.v line 25
+run -continue
+# ** Note: $stop    : D:/EE/EE446/Lab4/MultiCycle/MultiCycle_tb.v(25)
+#    Time: 460 ps  Iteration: 0  Instance: /MultiCycle_tb
+# Break in Module MultiCycle_tb at D:/EE/EE446/Lab4/MultiCycle/MultiCycle_tb.v line 25
+run -continue
+# ** Note: $stop    : D:/EE/EE446/Lab4/MultiCycle/MultiCycle_tb.v(25)
+#    Time: 480 ps  Iteration: 0  Instance: /MultiCycle_tb
+# Break in Module MultiCycle_tb at D:/EE/EE446/Lab4/MultiCycle/MultiCycle_tb.v line 25
+run -continue
+# ** Note: $stop    : D:/EE/EE446/Lab4/MultiCycle/MultiCycle_tb.v(25)
+#    Time: 500 ps  Iteration: 0  Instance: /MultiCycle_tb
+# Break in Module MultiCycle_tb at D:/EE/EE446/Lab4/MultiCycle/MultiCycle_tb.v line 25
+run -continue
+# ** Note: $stop    : D:/EE/EE446/Lab4/MultiCycle/MultiCycle_tb.v(25)
+#    Time: 520 ps  Iteration: 0  Instance: /MultiCycle_tb
+# Break in Module MultiCycle_tb at D:/EE/EE446/Lab4/MultiCycle/MultiCycle_tb.v line 25
+run -continue
+# ** Note: $stop    : D:/EE/EE446/Lab4/MultiCycle/MultiCycle_tb.v(25)
+#    Time: 540 ps  Iteration: 0  Instance: /MultiCycle_tb
+# Break in Module MultiCycle_tb at D:/EE/EE446/Lab4/MultiCycle/MultiCycle_tb.v line 25
+run -continue
+# ** Note: $stop    : D:/EE/EE446/Lab4/MultiCycle/MultiCycle_tb.v(25)
+#    Time: 560 ps  Iteration: 0  Instance: /MultiCycle_tb
+# Break in Module MultiCycle_tb at D:/EE/EE446/Lab4/MultiCycle/MultiCycle_tb.v line 25
+run -continue
+# ** Note: $stop    : D:/EE/EE446/Lab4/MultiCycle/MultiCycle_tb.v(25)
+#    Time: 580 ps  Iteration: 0  Instance: /MultiCycle_tb
+# Break in Module MultiCycle_tb at D:/EE/EE446/Lab4/MultiCycle/MultiCycle_tb.v line 25
+run -continue
+# ** Note: $stop    : D:/EE/EE446/Lab4/MultiCycle/MultiCycle_tb.v(25)
+#    Time: 600 ps  Iteration: 0  Instance: /MultiCycle_tb
+# Break in Module MultiCycle_tb at D:/EE/EE446/Lab4/MultiCycle/MultiCycle_tb.v line 25
+run -continue
+# ** Note: $stop    : D:/EE/EE446/Lab4/MultiCycle/MultiCycle_tb.v(25)
+#    Time: 620 ps  Iteration: 0  Instance: /MultiCycle_tb
+# Break in Module MultiCycle_tb at D:/EE/EE446/Lab4/MultiCycle/MultiCycle_tb.v line 25
+run -continue
+# ** Note: $stop    : D:/EE/EE446/Lab4/MultiCycle/MultiCycle_tb.v(25)
+#    Time: 640 ps  Iteration: 0  Instance: /MultiCycle_tb
+# Break in Module MultiCycle_tb at D:/EE/EE446/Lab4/MultiCycle/MultiCycle_tb.v line 25
+run -continue
+# ** Note: $stop    : D:/EE/EE446/Lab4/MultiCycle/MultiCycle_tb.v(25)
+#    Time: 660 ps  Iteration: 0  Instance: /MultiCycle_tb
+# Break in Module MultiCycle_tb at D:/EE/EE446/Lab4/MultiCycle/MultiCycle_tb.v line 25
+run -continue
+# ** Note: $stop    : D:/EE/EE446/Lab4/MultiCycle/MultiCycle_tb.v(25)
+#    Time: 680 ps  Iteration: 0  Instance: /MultiCycle_tb
+# Break in Module MultiCycle_tb at D:/EE/EE446/Lab4/MultiCycle/MultiCycle_tb.v line 25
+run -continue
+# ** Note: $stop    : D:/EE/EE446/Lab4/MultiCycle/MultiCycle_tb.v(25)
+#    Time: 700 ps  Iteration: 0  Instance: /MultiCycle_tb
+# Break in Module MultiCycle_tb at D:/EE/EE446/Lab4/MultiCycle/MultiCycle_tb.v line 25
+run -continue
+# ** Note: $stop    : D:/EE/EE446/Lab4/MultiCycle/MultiCycle_tb.v(25)
+#    Time: 720 ps  Iteration: 0  Instance: /MultiCycle_tb
+# Break in Module MultiCycle_tb at D:/EE/EE446/Lab4/MultiCycle/MultiCycle_tb.v line 25
+run -continue
+# ** Note: $stop    : D:/EE/EE446/Lab4/MultiCycle/MultiCycle_tb.v(25)
+#    Time: 740 ps  Iteration: 0  Instance: /MultiCycle_tb
+# Break in Module MultiCycle_tb at D:/EE/EE446/Lab4/MultiCycle/MultiCycle_tb.v line 25
+run -continue
+# ** Note: $stop    : D:/EE/EE446/Lab4/MultiCycle/MultiCycle_tb.v(25)
+#    Time: 760 ps  Iteration: 0  Instance: /MultiCycle_tb
+# Break in Module MultiCycle_tb at D:/EE/EE446/Lab4/MultiCycle/MultiCycle_tb.v line 25
+run -continue
+# ** Note: $stop    : D:/EE/EE446/Lab4/MultiCycle/MultiCycle_tb.v(25)
+#    Time: 780 ps  Iteration: 0  Instance: /MultiCycle_tb
+# Break in Module MultiCycle_tb at D:/EE/EE446/Lab4/MultiCycle/MultiCycle_tb.v line 25
+run -continue
+# ** Note: $stop    : D:/EE/EE446/Lab4/MultiCycle/MultiCycle_tb.v(25)
+#    Time: 800 ps  Iteration: 0  Instance: /MultiCycle_tb
+# Break in Module MultiCycle_tb at D:/EE/EE446/Lab4/MultiCycle/MultiCycle_tb.v line 25
+run -continue
+# ** Note: $stop    : D:/EE/EE446/Lab4/MultiCycle/MultiCycle_tb.v(25)
+#    Time: 820 ps  Iteration: 0  Instance: /MultiCycle_tb
+# Break in Module MultiCycle_tb at D:/EE/EE446/Lab4/MultiCycle/MultiCycle_tb.v line 25
+run -continue
+# ** Note: $stop    : D:/EE/EE446/Lab4/MultiCycle/MultiCycle_tb.v(25)
+#    Time: 840 ps  Iteration: 0  Instance: /MultiCycle_tb
+# Break in Module MultiCycle_tb at D:/EE/EE446/Lab4/MultiCycle/MultiCycle_tb.v line 25
+run -continue
+# ** Note: $stop    : D:/EE/EE446/Lab4/MultiCycle/MultiCycle_tb.v(25)
+#    Time: 860 ps  Iteration: 0  Instance: /MultiCycle_tb
+# Break in Module MultiCycle_tb at D:/EE/EE446/Lab4/MultiCycle/MultiCycle_tb.v line 25
+run -continue
+# ** Note: $stop    : D:/EE/EE446/Lab4/MultiCycle/MultiCycle_tb.v(25)
+#    Time: 880 ps  Iteration: 0  Instance: /MultiCycle_tb
+# Break in Module MultiCycle_tb at D:/EE/EE446/Lab4/MultiCycle/MultiCycle_tb.v line 25
+run -continue
+# ** Note: $stop    : D:/EE/EE446/Lab4/MultiCycle/MultiCycle_tb.v(25)
+#    Time: 900 ps  Iteration: 0  Instance: /MultiCycle_tb
+# Break in Module MultiCycle_tb at D:/EE/EE446/Lab4/MultiCycle/MultiCycle_tb.v line 25
+run -continue
+# ** Note: $stop    : D:/EE/EE446/Lab4/MultiCycle/MultiCycle_tb.v(25)
+#    Time: 920 ps  Iteration: 0  Instance: /MultiCycle_tb
+# Break in Module MultiCycle_tb at D:/EE/EE446/Lab4/MultiCycle/MultiCycle_tb.v line 25
+run -continue
+# ** Note: $stop    : D:/EE/EE446/Lab4/MultiCycle/MultiCycle_tb.v(25)
+#    Time: 940 ps  Iteration: 0  Instance: /MultiCycle_tb
+# Break in Module MultiCycle_tb at D:/EE/EE446/Lab4/MultiCycle/MultiCycle_tb.v line 25
+run -continue
+# ** Note: $stop    : D:/EE/EE446/Lab4/MultiCycle/MultiCycle_tb.v(25)
+#    Time: 960 ps  Iteration: 0  Instance: /MultiCycle_tb
+# Break in Module MultiCycle_tb at D:/EE/EE446/Lab4/MultiCycle/MultiCycle_tb.v line 25
+run -continue
+# ** Note: $stop    : D:/EE/EE446/Lab4/MultiCycle/MultiCycle_tb.v(25)
+#    Time: 980 ps  Iteration: 0  Instance: /MultiCycle_tb
+# Break in Module MultiCycle_tb at D:/EE/EE446/Lab4/MultiCycle/MultiCycle_tb.v line 25
+run -continue
+# ** Note: $stop    : D:/EE/EE446/Lab4/MultiCycle/MultiCycle_tb.v(25)
+#    Time: 1 ns  Iteration: 0  Instance: /MultiCycle_tb
+# Break in Module MultiCycle_tb at D:/EE/EE446/Lab4/MultiCycle/MultiCycle_tb.v line 25
+run -continue
+# ** Note: $stop    : D:/EE/EE446/Lab4/MultiCycle/MultiCycle_tb.v(25)
+#    Time: 1020 ps  Iteration: 0  Instance: /MultiCycle_tb
+# Break in Module MultiCycle_tb at D:/EE/EE446/Lab4/MultiCycle/MultiCycle_tb.v line 25
+run -continue
+# ** Note: $stop    : D:/EE/EE446/Lab4/MultiCycle/MultiCycle_tb.v(25)
+#    Time: 1040 ps  Iteration: 0  Instance: /MultiCycle_tb
+# Break in Module MultiCycle_tb at D:/EE/EE446/Lab4/MultiCycle/MultiCycle_tb.v line 25
+run -continue
+# ** Note: $stop    : D:/EE/EE446/Lab4/MultiCycle/MultiCycle_tb.v(25)
+#    Time: 1060 ps  Iteration: 0  Instance: /MultiCycle_tb
+# Break in Module MultiCycle_tb at D:/EE/EE446/Lab4/MultiCycle/MultiCycle_tb.v line 25
+run -continue
+# ** Note: $stop    : D:/EE/EE446/Lab4/MultiCycle/MultiCycle_tb.v(25)
+#    Time: 1080 ps  Iteration: 0  Instance: /MultiCycle_tb
+# Break in Module MultiCycle_tb at D:/EE/EE446/Lab4/MultiCycle/MultiCycle_tb.v line 25
+run -continue
+# ** Note: $stop    : D:/EE/EE446/Lab4/MultiCycle/MultiCycle_tb.v(25)
+#    Time: 1100 ps  Iteration: 0  Instance: /MultiCycle_tb
+# Break in Module MultiCycle_tb at D:/EE/EE446/Lab4/MultiCycle/MultiCycle_tb.v line 25
+run -continue
+# ** Note: $stop    : D:/EE/EE446/Lab4/MultiCycle/MultiCycle_tb.v(25)
+#    Time: 1120 ps  Iteration: 0  Instance: /MultiCycle_tb
+# Break in Module MultiCycle_tb at D:/EE/EE446/Lab4/MultiCycle/MultiCycle_tb.v line 25
+run -continue
+# ** Note: $stop    : D:/EE/EE446/Lab4/MultiCycle/MultiCycle_tb.v(25)
+#    Time: 1140 ps  Iteration: 0  Instance: /MultiCycle_tb
+# Break in Module MultiCycle_tb at D:/EE/EE446/Lab4/MultiCycle/MultiCycle_tb.v line 25
+run -continue
+# ** Note: $stop    : D:/EE/EE446/Lab4/MultiCycle/MultiCycle_tb.v(25)
+#    Time: 1160 ps  Iteration: 0  Instance: /MultiCycle_tb
+# Break in Module MultiCycle_tb at D:/EE/EE446/Lab4/MultiCycle/MultiCycle_tb.v line 25
+run -continue
+# ** Note: $stop    : D:/EE/EE446/Lab4/MultiCycle/MultiCycle_tb.v(25)
+#    Time: 1180 ps  Iteration: 0  Instance: /MultiCycle_tb
+# Break in Module MultiCycle_tb at D:/EE/EE446/Lab4/MultiCycle/MultiCycle_tb.v line 25
+run -continue
+# ** Note: $stop    : D:/EE/EE446/Lab4/MultiCycle/MultiCycle_tb.v(25)
+#    Time: 1200 ps  Iteration: 0  Instance: /MultiCycle_tb
+# Break in Module MultiCycle_tb at D:/EE/EE446/Lab4/MultiCycle/MultiCycle_tb.v line 25
+run -continue
+# ** Note: $stop    : D:/EE/EE446/Lab4/MultiCycle/MultiCycle_tb.v(25)
+#    Time: 1220 ps  Iteration: 0  Instance: /MultiCycle_tb
+# Break in Module MultiCycle_tb at D:/EE/EE446/Lab4/MultiCycle/MultiCycle_tb.v line 25
+run -continue
+# ** Note: $stop    : D:/EE/EE446/Lab4/MultiCycle/MultiCycle_tb.v(25)
+#    Time: 1240 ps  Iteration: 0  Instance: /MultiCycle_tb
+# Break in Module MultiCycle_tb at D:/EE/EE446/Lab4/MultiCycle/MultiCycle_tb.v line 25
+# End time: 22:16:57 on Jun 05,2022, Elapsed time: 0:06:35
+# Errors: 0, Warnings: 0

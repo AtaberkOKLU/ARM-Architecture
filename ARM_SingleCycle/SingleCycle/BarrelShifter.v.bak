@@ -1,0 +1,12 @@
+module BarrelShifter #(
+	parameter WIDTH = 32
+) (
+	input wire [4:0] 			ShiftSize,
+	input wire [23:0]			base,
+	input wire 					L_notR,
+	output wire [WIDTH-1:0] 	out
+);
+
+	assign out = {base[i - 1:0], base[WIDTH-1:i]}
+
+endmodule 

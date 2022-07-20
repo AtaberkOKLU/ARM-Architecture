@@ -1,0 +1,97 @@
+module RegisterFile  #(
+	parameter W = 4
+) (
+	input 	wire [1:0] 		AD1,
+	input 	wire [1:0] 		AD2,
+	input 	wire [1:0] 		WAD,	// Write Address
+	input 	wire [W-1:0] 	WDI,	// Write Data Input
+	input 	wire 				WE,	// Write Enable
+	input 	wire 				RESET_N,
+	input 	wire 				CLK,
+	output 	wire [W-1:0]	DO1,
+	output 	wire [W-1:0]	DO2
+);
+	wire [W-1:0] 	Decoder_WE_Out;
+
+	wire [W-1:0] 	Reg_RWE_1_Out; 
+	wire 				Reg_RWE_1_WE;
+	wire [W-1:0] 	Reg_RWE_2_Out; 
+	wire 				Reg_RWE_2_WE;
+	wire [W-1:0] 	Reg_RWE_3_Out; 
+	wire 				Reg_RWE_3_WE;
+	wire [W-1:0] 	Reg_RWE_4_Out; 
+	wire 				Reg_RWE_4_WE;
+
+// Write Enable Decoder
+	Decoder2x4_Cond Decoder2x4_Cond_WE(
+		.In(WAD),
+		.Cond(WE),
+		.Out(Decoder_WE_Out)
+	);
+	assign {Reg_RWE_4_WE, Reg_RWE_3_WE, Reg_RWE_2_WE, Reg_RWE_1_WE} = Decoder_WE_Out;
+
+// Registers
+	Reg_RWE #(
+		.W(W)
+	) Reg_RWE_1 (
+		.In(WDI),
+		.WE(Reg_RWE_1_WE),
+		.RESET_N(RESET_N),
+		.CLK(CLK),
+		.Out(Reg_RWE_1_Out)
+	);
+
+	Reg_RWE #(
+		.W(W)
+	) Reg_RWE_2 (
+		.In(WDI),
+		.WE(Reg_RWE_2_WE),
+		.RESET_N(RESET_N),
+		.CLK(CLK),
+		.Out(Reg_RWE_2_Out)
+	);
+
+	Reg_RWE #(
+		.W(W)
+	) Reg_RWE_3 (
+		.In(WDI),
+		.WE(Reg_RWE_3_WE),
+		.RESET_N(RESET_N),
+		.CLK(CLK),
+		.Out(Reg_RWE_3_Out)
+	);
+
+	Reg_RWE #(
+		.W(W)
+	) Reg_RWE_4 (
+		.In(WDI),
+		.WE(Reg_RWE_4_WE),
+		.RESET_N(RESET_N),
+		.CLK(CLK),
+		.Out(Reg_RWE_4_Out)
+	);
+
+// Output Muxers
+	Mux4x1 #(
+		.W(W)	
+	) Mux4x1_DO1 (
+		.In1(Reg_RWE_1_Out),
+		.In2(Reg_RWE_2_Out),
+		.In3(Reg_RWE_3_Out),
+		.In4(Reg_RWE_4_Out),
+		.Sel(AD1),
+		.Out(DO1)
+	);
+
+	Mux4x1 #(
+		.W(W)	
+	) Mux4x1_DO2 (
+		.In1(Reg_RWE_1_Out),
+		.In2(Reg_RWE_2_Out),
+		.In3(Reg_RWE_3_Out),
+		.In4(Reg_RWE_4_Out),
+		.Sel(AD2),
+		.Out(DO2)
+	);
+
+endmodule

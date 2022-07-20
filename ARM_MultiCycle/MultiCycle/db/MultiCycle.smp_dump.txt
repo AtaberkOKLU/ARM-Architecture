@@ -1,0 +1,14 @@
+
+State Machine - |MultiCycle|MultiCycleController:b2v_inst|MultiCycleMainFSM:MultiCycleMainFSM_inst0|state
+Name state.S10_BranchLink state.S9_Branch state.S8_ALUWB state.S7_ExecuteI state.S6_ExecuteR state.S5_MemWrite state.S4_MemWB state.S3_MemRead state.S2_MemAdr state.S1_Decode state.S0_Fetch 
+state.S0_Fetch 0 0 0 0 0 0 0 0 0 0 0 
+state.S1_Decode 0 0 0 0 0 0 0 0 0 1 1 
+state.S2_MemAdr 0 0 0 0 0 0 0 0 1 0 1 
+state.S3_MemRead 0 0 0 0 0 0 0 1 0 0 1 
+state.S4_MemWB 0 0 0 0 0 0 1 0 0 0 1 
+state.S5_MemWrite 0 0 0 0 0 1 0 0 0 0 1 
+state.S6_ExecuteR 0 0 0 0 1 0 0 0 0 0 1 
+state.S7_ExecuteI 0 0 0 1 0 0 0 0 0 0 1 
+state.S8_ALUWB 0 0 1 0 0 0 0 0 0 0 1 
+state.S9_Branch 0 1 0 0 0 0 0 0 0 0 1 
+state.S10_BranchLink 1 0 0 0 0 0 0 0 0 0 1 

@@ -1,0 +1,13 @@
+module Decoder4x16_Cond  (
+	input 	wire [3:0] 	In,
+	input 	wire 			Cond,
+	output 	reg  [15:0]	Out
+);
+
+	always @(In, Cond)
+		if (~Cond)
+			Out = 4'b0;
+		else
+			Out = 1'b1 << In;
+
+endmodule 

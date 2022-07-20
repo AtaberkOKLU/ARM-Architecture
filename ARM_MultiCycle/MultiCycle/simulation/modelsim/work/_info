@@ -1,0 +1,155 @@
+m255
+K4
+z2
+!s11f vlog 2021.2 2021.04, Apr 14 2021
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/EE/EE446/Lab4/MultiCycle/simulation/modelsim
+vALU
+Z1 !s110 1654418965
+!i10b 1
+!s100 SC5hhP`cCda`jkFmE8kan2
+I?H2kLF4BN`g8N4jO^<0FX0
+R0
+w1653418898
+8D:/EE/EE446/Lab4/MultiCycle/Modules/ALU.v
+FD:/EE/EE446/Lab4/MultiCycle/Modules/ALU.v
+!i122 3
+L0 1 69
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+Z3 OL;L;2021.2;73
+r1
+!s85 0
+31
+Z4 !s108 1654418965.000000
+!s107 D:/EE/EE446/Lab4/MultiCycle/Modules/ALU.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/EE/EE446/Lab4/MultiCycle/Modules|D:/EE/EE446/Lab4/MultiCycle/Modules/ALU.v|
+!i113 0
+Z5 o-vlog01compat -work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z6 !s92 -vlog01compat -work work +incdir+D:/EE/EE446/Lab4/MultiCycle/Modules -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z7 tCvgOpt 0
+n@a@l@u
+vConstantValueGenerator
+R1
+!i10b 1
+!s100 ?3i3X[`eXTlD_fhd4SAFi1
+IOzj:N:S^?QNOYE^YS>C_O0
+R0
+w1648566578
+8D:/EE/EE446/Lab4/MultiCycle/Modules/ConstantValueGenerator.v
+FD:/EE/EE446/Lab4/MultiCycle/Modules/ConstantValueGenerator.v
+!i122 2
+L0 13 12
+R2
+R3
+r1
+!s85 0
+31
+R4
+!s107 D:/EE/EE446/Lab4/MultiCycle/Modules/ConstantValueGenerator.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/EE/EE446/Lab4/MultiCycle/Modules|D:/EE/EE446/Lab4/MultiCycle/Modules/ConstantValueGenerator.v|
+!i113 0
+R5
+R6
+R7
+n@constant@value@generator
+vDecoder4x16_Cond
+R1
+!i10b 1
+!s100 683>32>20XUE1mS=2WQZ>3
+IMbP86g@Tg=]<ZEhnFL_<00
+R0
+w1652282356
+8D:/EE/EE446/Lab4/MultiCycle/Modules/Decoder4x16_Cond.v
+FD:/EE/EE446/Lab4/MultiCycle/Modules/Decoder4x16_Cond.v
+!i122 1
+L0 1 32
+R2
+R3
+r1
+!s85 0
+31
+R4
+!s107 D:/EE/EE446/Lab4/MultiCycle/Modules/Decoder4x16_Cond.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/EE/EE446/Lab4/MultiCycle/Modules|D:/EE/EE446/Lab4/MultiCycle/Modules/Decoder4x16_Cond.v|
+!i113 0
+R5
+R6
+R7
+n@decoder4x16_@cond
+vExtender
+!s110 1654418964
+!i10b 1
+!s100 CdD>[o]8k@B^4ZQ52>K:I1
+IYYVAAoenAJAKzhSY>Sa>J0
+R0
+w1653926632
+8D:/EE/EE446/Lab4/MultiCycle/Modules/Extender.v
+FD:/EE/EE446/Lab4/MultiCycle/Modules/Extender.v
+!i122 0
+L0 1 22
+R2
+R3
+r1
+!s85 0
+31
+!s108 1654418964.000000
+!s107 D:/EE/EE446/Lab4/MultiCycle/Modules/Extender.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/EE/EE446/Lab4/MultiCycle/Modules|D:/EE/EE446/Lab4/MultiCycle/Modules/Extender.v|
+!i113 0
+R5
+R6
+R7
+n@extender
+vMultiCycleMainFSM
+R1
+!i10b 1
+!s100 <K4JgzeLSKWj4<^Cgdz5X2
+I1WfVYP0WYR3SneDzWo]m;3
+R0
+w1653934369
+8D:/EE/EE446/Lab4/MultiCycle/MultiCycleMainFSM.v
+FD:/EE/EE446/Lab4/MultiCycle/MultiCycleMainFSM.v
+!i122 4
+L0 1 370
+R2
+R3
+r1
+!s85 0
+31
+R4
+!s107 D:/EE/EE446/Lab4/MultiCycle/MultiCycleMainFSM.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/EE/EE446/Lab4/MultiCycle|D:/EE/EE446/Lab4/MultiCycle/MultiCycleMainFSM.v|
+!i113 0
+R5
+!s92 -vlog01compat -work work +incdir+D:/EE/EE446/Lab4/MultiCycle -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R7
+n@multi@cycle@main@f@s@m
+vSyncMemory
+R1
+!i10b 1
+!s100 e6No9[i[9XSUb8jIY2>8F0
+IDdoPC@7iB0BC>^C24ZINz0
+R0
+w1653415579
+8D:/EE/EE446/Lab4/MultiCycle/Modules/SyncMemory.v
+FD:/EE/EE446/Lab4/MultiCycle/Modules/SyncMemory.v
+!i122 5
+L0 1 45
+R2
+R3
+r1
+!s85 0
+31
+R4
+!s107 D:/EE/EE446/Lab4/MultiCycle/Modules/SyncMemory.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/EE/EE446/Lab4/MultiCycle/Modules|D:/EE/EE446/Lab4/MultiCycle/Modules/SyncMemory.v|
+!i113 0
+R5
+R6
+R7
+n@sync@memory

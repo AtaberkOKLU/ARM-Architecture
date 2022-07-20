@@ -1,0 +1,97 @@
+module ALU  #(
+	parameter W = 4
+)(
+	input 	wire [W-1:0] 	In1,
+	input 	wire [W-1:0] 	In2,
+	input		wire [2:0]		OpSel, 
+	output 	wire [W-1:0] 	Out,
+	output 	wire [3:0]		Status // (CO ,OVF, Z, N)
+);
+
+	// Signals
+	wire needComp;
+	wire srcComp;
+	wire [W-1:0] outComp;
+	wire [W-1:0] outCompNot;
+	wire [W-1:0] FA_A;			// In1 of FullAdder
+	wire [W-1:0] FA_B; 			// In2 of FullAdder	
+	wire CarryOut;					// Co  of FullAdder
+	wire [W-1:0] FA_Out;			// Out of FullAdder
+	wire [W-1:0] OutSrcAr;
+	wire [W-1:0] OutSrcLog;
+	wire Cout, CO, OVF, Z, N; 			// Status Bits
+
+
+	// Assignments
+	assign needComp = (~OpSel[2]) & ( OpSel[1] ^ OpSel[0] );
+	assign srcComp  = OpSel[1];
+	assign outCompNot = ~outComp;
+
+	assign CO   = Cout & ( ~OpSel[2] & !(&OpSel[1:0]));
+	assign OVF 	= (N&~FA_A[W-1]&~FA_B[W-1]) || ((~N)&FA_A[W-1]&FA_B[W-1]) & ( ~OpSel[2] & !(&OpSel[1:0]));
+	assign Z  	= ~|Out;
+	assign N 	= Out[W-1];
+	assign Status 	= {CO, OVF, Z, N};
+	
+
+	Mux2x2 #( 
+		.W(W)
+	) Mux2x2_Sel_FA (
+		.In1(In1), 
+		.In2(In2), 
+		.Sel(needComp & srcComp),
+		.Out1(FA_A),
+		.Out2(outComp)
+	);
+
+	Mux2x1 #( 
+		.W(W)
+	) Mux2x1_Comp (
+		.In1(outComp), 
+		.In2(outCompNot),
+		.Sel(needComp),
+		.Out(FA_B)
+	);
+
+	FullAdder_O  #(
+		.W(W)
+	) FullAdder_O_0 (
+		.A(FA_A),
+		.B(FA_B),
+		.Cin(needComp),
+		.Cout(Cout),
+		.Out(FA_Out)
+	);
+		
+	Mux2x1 #( 
+		.W(W)
+	) Mux2x1_ArOp  (
+		.In1(FA_Out), 
+		.In2(outCompNot&In1), 
+		.Sel(&OpSel[1:0]),
+		.Out(OutSrcAr)
+	);
+
+	
+	wire [W-1:0] A_xor_B = In1^In2;
+	Mux4x1 #( 
+		.W(W)
+	) Mux4x1_LogOp (
+		.In1(In1&In2), 
+		.In2(In1|In2), 
+		.In3(A_xor_B),
+		.In4(~A_xor_B), 
+		.Sel(OpSel[1:0]),
+		.Out(OutSrcLog)
+	);
+
+	Mux2x1 #( 
+		.W(W)
+	) Mux2x1_SelOut (
+		.In1(OutSrcAr), 
+		.In2(OutSrcLog), 
+		.Sel(OpSel[2]),
+		.Out(Out)
+	);
+
+endmodule

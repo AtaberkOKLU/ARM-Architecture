@@ -1,0 +1,311 @@
+// Copyright (C) 2021  Intel Corporation. All rights reserved.
+// Your use of Intel Corporation's design tools, logic functions 
+// and other software and tools, and any partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Intel Program License 
+// Subscription Agreement, the Intel Quartus Prime License Agreement,
+// the Intel FPGA IP License Agreement, or other applicable license
+// agreement, including, without limitation, that your use is for
+// the sole purpose of programming logic devices manufactured by
+// Intel and sold by Intel or its authorized distributors.  Please
+// refer to the applicable agreement for further details, at
+// https://fpgasoftware.intel.com/eula.
+
+// PROGRAM		"Quartus Prime"
+// VERSION		"Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition"
+// CREATED		"Sun Jun  5 12:19:18 2022"
+
+module MultiCycle(
+	CLK,
+	RESET_N,
+	OUT,
+	STATE
+);
+
+
+input wire	CLK;
+input wire	RESET_N;
+output wire	[3:0] OUT;
+output wire	[3:0] STATE;
+
+wire	AdrSrc;
+wire	[2:0] ALUControl;
+wire	[3:0] ALUFlags;
+wire	ALUSrcA;
+wire	[1:0] ALUSrcB;
+wire	BL_Active;
+wire	[31:0] data;
+wire	[26:0] GND;
+wire	[1:0] ImmSrc;
+wire	[31:0] Instr;
+wire	IRWrite;
+wire	MemWrite;
+wire	[4:0] PC;
+wire	PCWrite;
+wire	[1:0] RegSrc;
+wire	RegWrite;
+wire	[31:0] Result;
+wire	[1:0] ResultSrc;
+wire	Shifter_En;
+wire	SYNTHESIZED_WIRE_0;
+wire	[31:0] SYNTHESIZED_WIRE_28;
+wire	[3:0] SYNTHESIZED_WIRE_2;
+wire	[31:0] SYNTHESIZED_WIRE_3;
+wire	[31:0] SYNTHESIZED_WIRE_29;
+wire	[31:0] SYNTHESIZED_WIRE_5;
+wire	[31:0] SYNTHESIZED_WIRE_6;
+wire	[0:31] SYNTHESIZED_WIRE_7;
+wire	[31:0] SYNTHESIZED_WIRE_8;
+wire	[31:0] SYNTHESIZED_WIRE_9;
+wire	SYNTHESIZED_WIRE_10;
+wire	[31:0] SYNTHESIZED_WIRE_30;
+wire	[31:0] SYNTHESIZED_WIRE_12;
+wire	[0:31] SYNTHESIZED_WIRE_14;
+wire	[31:0] SYNTHESIZED_WIRE_15;
+wire	[3:0] SYNTHESIZED_WIRE_16;
+wire	[3:0] SYNTHESIZED_WIRE_17;
+wire	[3:0] SYNTHESIZED_WIRE_18;
+wire	[31:0] SYNTHESIZED_WIRE_19;
+wire	SYNTHESIZED_WIRE_31;
+wire	[31:0] SYNTHESIZED_WIRE_21;
+wire	[31:0] SYNTHESIZED_WIRE_23;
+wire	[3:0] SYNTHESIZED_WIRE_24;
+wire	[4:0] SYNTHESIZED_WIRE_26;
+
+assign	SYNTHESIZED_WIRE_0 = 1;
+assign	SYNTHESIZED_WIRE_7 = 0;
+assign	SYNTHESIZED_WIRE_10 = 1;
+assign	SYNTHESIZED_WIRE_14 = 0;
+assign	SYNTHESIZED_WIRE_31 = 1;
+wire	[31:0] GDFX_TEMP_SIGNAL_0;
+wire	[31:0] GDFX_TEMP_SIGNAL_1;
+
+
+assign	GDFX_TEMP_SIGNAL_0 = {GND[26:0],PC[4:0]};
+assign	GDFX_TEMP_SIGNAL_1 = {GND[26:0],PC[4:0]};
+
+
+Reg_RWE	b2v_DT_Reg(
+	.WE(SYNTHESIZED_WIRE_0),
+	.RESET_N(RESET_N),
+	.CLK(CLK),
+	.In(SYNTHESIZED_WIRE_28),
+	.Out(data));
+	defparam	b2v_DT_Reg.W = 32;
+
+
+MultiCycleController	b2v_inst(
+	.CLK(CLK),
+	.RESET_N(RESET_N),
+	.ALUFlags(ALUFlags),
+	.Cond(Instr[31:28]),
+	.Func(Instr[25:20]),
+	.Op(Instr[27:26]),
+	.Rd(Instr[15:12]),
+	.PCWrite(PCWrite),
+	.RegWrite(RegWrite),
+	.MemWrite(MemWrite),
+	.IRWrite(IRWrite),
+	.AdrSrc(AdrSrc),
+	.ALUSrcA(ALUSrcA),
+	.BL_Active(BL_Active),
+	.Shifter_En(Shifter_En),
+	.ALUControl(ALUControl),
+	.ALUSrcB(ALUSrcB),
+	.ImmSrc(ImmSrc),
+	.RegSrc(RegSrc),
+	.ResultSrc(ResultSrc),
+	.State(STATE));
+
+
+Mux2x1	b2v_inst1(
+	.Sel(BL_Active),
+	.In1(Instr[15:12]),
+	.In2(SYNTHESIZED_WIRE_2),
+	.Out(SYNTHESIZED_WIRE_18));
+	defparam	b2v_inst1.W = 4;
+
+
+Mux2x1	b2v_inst10(
+	.Sel(ALUSrcA),
+	.In1(SYNTHESIZED_WIRE_3),
+	.In2(GDFX_TEMP_SIGNAL_0),
+	.Out(SYNTHESIZED_WIRE_8));
+	defparam	b2v_inst10.W = 32;
+
+
+Mux4x1	b2v_inst11(
+	.In1(SYNTHESIZED_WIRE_29),
+	.In2(SYNTHESIZED_WIRE_5),
+	.In3(SYNTHESIZED_WIRE_6),
+	.In4(SYNTHESIZED_WIRE_7),
+	.Sel(ALUSrcB),
+	.Out(SYNTHESIZED_WIRE_15));
+	defparam	b2v_inst11.W = 32;
+
+
+ConstantValueGenerator	b2v_inst12(
+	.Out(SYNTHESIZED_WIRE_6));
+	defparam	b2v_inst12.VALUE = 1;
+	defparam	b2v_inst12.WIDTH = 32;
+
+
+
+ALU	b2v_inst14(
+	.In1(SYNTHESIZED_WIRE_8),
+	.In2(SYNTHESIZED_WIRE_9),
+	.OpSel(ALUControl),
+	.Out(SYNTHESIZED_WIRE_30),
+	.Status(ALUFlags));
+	defparam	b2v_inst14.W = 32;
+
+
+Reg_RWE	b2v_inst15(
+	.WE(SYNTHESIZED_WIRE_10),
+	.RESET_N(RESET_N),
+	.CLK(CLK),
+	.In(SYNTHESIZED_WIRE_30),
+	.Out(SYNTHESIZED_WIRE_12));
+	defparam	b2v_inst15.W = 32;
+
+
+Mux4x1	b2v_inst16(
+	.In1(SYNTHESIZED_WIRE_12),
+	.In2(data),
+	.In3(SYNTHESIZED_WIRE_30),
+	.In4(SYNTHESIZED_WIRE_14),
+	.Sel(ResultSrc),
+	.Out(Result));
+	defparam	b2v_inst16.W = 32;
+
+
+
+
+
+Mux2x1	b2v_inst2(
+	.Sel(AdrSrc),
+	.In1(PC),
+	.In2(Result[4:0]),
+	.Out(SYNTHESIZED_WIRE_26));
+	defparam	b2v_inst2.W = 5;
+
+
+
+Mux2x1	b2v_inst21(
+	.Sel(BL_Active),
+	.In1(Result),
+	.In2(GDFX_TEMP_SIGNAL_1),
+	.Out(SYNTHESIZED_WIRE_19));
+	defparam	b2v_inst21.W = 32;
+
+
+Shifter	b2v_inst23(
+	.I(Instr[25]),
+	.En(Shifter_En),
+	.Number(SYNTHESIZED_WIRE_15),
+	.Shift(Instr[11:0]),
+	.Out(SYNTHESIZED_WIRE_9));
+	defparam	b2v_inst23.WIDTH = 32;
+
+
+ConstantValueGenerator	b2v_inst3(
+	.Out(SYNTHESIZED_WIRE_2));
+	defparam	b2v_inst3.VALUE = 14;
+	defparam	b2v_inst3.WIDTH = 4;
+
+
+Mux2x1	b2v_inst4(
+	.Sel(RegSrc[1]),
+	.In1(Instr[3:0]),
+	.In2(Instr[15:12]),
+	.Out(SYNTHESIZED_WIRE_17));
+	defparam	b2v_inst4.W = 4;
+
+
+ConstantValueGenerator	b2v_inst5(
+	.Out(SYNTHESIZED_WIRE_24));
+	defparam	b2v_inst5.VALUE = 15;
+	defparam	b2v_inst5.WIDTH = 4;
+
+
+RegisterFile	b2v_inst6(
+	.WE(RegWrite),
+	.RESET_N(RESET_N),
+	.CLK(CLK),
+	.AD1(SYNTHESIZED_WIRE_16),
+	.AD2(SYNTHESIZED_WIRE_17),
+	.R15(Result),
+	.WAD(SYNTHESIZED_WIRE_18),
+	.WDI(SYNTHESIZED_WIRE_19),
+	.DO1(SYNTHESIZED_WIRE_21),
+	.DO2(SYNTHESIZED_WIRE_23));
+	defparam	b2v_inst6.W = 32;
+
+
+Extender	b2v_inst7(
+	.Mode(ImmSrc),
+	.Number(Instr[23:0]),
+	.Extended(SYNTHESIZED_WIRE_5));
+	defparam	b2v_inst7.WIDTH = 32;
+
+
+Reg_RWE	b2v_inst8(
+	.WE(SYNTHESIZED_WIRE_31),
+	.RESET_N(RESET_N),
+	.CLK(CLK),
+	.In(SYNTHESIZED_WIRE_21),
+	.Out(SYNTHESIZED_WIRE_3));
+	defparam	b2v_inst8.W = 32;
+
+
+Reg_RWE	b2v_inst9(
+	.WE(SYNTHESIZED_WIRE_31),
+	.RESET_N(RESET_N),
+	.CLK(CLK),
+	.In(SYNTHESIZED_WIRE_23),
+	.Out(SYNTHESIZED_WIRE_29));
+	defparam	b2v_inst9.W = 32;
+
+
+
+Mux2x1	b2v_inst99(
+	.Sel(RegSrc[0]),
+	.In1(Instr[19:16]),
+	.In2(SYNTHESIZED_WIRE_24),
+	.Out(SYNTHESIZED_WIRE_16));
+	defparam	b2v_inst99.W = 4;
+
+
+Reg_RWE	b2v_INSTRUCTION(
+	.WE(IRWrite),
+	.RESET_N(RESET_N),
+	.CLK(CLK),
+	.In(SYNTHESIZED_WIRE_28),
+	.Out(Instr));
+	defparam	b2v_INSTRUCTION.W = 32;
+
+
+Reg_RWE	b2v_PC1(
+	.WE(PCWrite),
+	.RESET_N(RESET_N),
+	.CLK(CLK),
+	.In(Result[4:0]),
+	.Out(PC));
+	defparam	b2v_PC1.W = 5;
+
+
+SyncMemory	b2v_RAM(
+	.WE(MemWrite),
+	.CLK(CLK),
+	.ADDR(SYNTHESIZED_WIRE_26),
+	.WDI(SYNTHESIZED_WIRE_29),
+	.DO(SYNTHESIZED_WIRE_28));
+	defparam	b2v_RAM.ADDR_W = 5;
+	defparam	b2v_RAM.WIDTH = 32;
+
+assign	OUT[3:0] = Result[3:0];
+assign	GND = 27'b000000000000000000000000000;
+
+endmodule

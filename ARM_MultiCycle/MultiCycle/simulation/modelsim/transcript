@@ -1,0 +1,89 @@
+# vlog -vlog01compat -work work +incdir+D:/EE/EE446/Lab4/MultiCycle/Modules {D:/EE/EE446/Lab4/MultiCycle/Modules/Extender.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 11:49:24 on Jun 05,2022
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/EE/EE446/Lab4/MultiCycle/Modules" D:/EE/EE446/Lab4/MultiCycle/Modules/Extender.v 
+# -- Compiling module Extender
+# 
+# Top level modules:
+# 	Extender
+# End time: 11:49:24 on Jun 05,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/EE/EE446/Lab4/MultiCycle/Modules {D:/EE/EE446/Lab4/MultiCycle/Modules/Decoder4x16_Cond.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 11:49:25 on Jun 05,2022
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/EE/EE446/Lab4/MultiCycle/Modules" D:/EE/EE446/Lab4/MultiCycle/Modules/Decoder4x16_Cond.v 
+# -- Compiling module Decoder4x16_Cond
+# 
+# Top level modules:
+# 	Decoder4x16_Cond
+# End time: 11:49:25 on Jun 05,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/EE/EE446/Lab4/MultiCycle/Modules {D:/EE/EE446/Lab4/MultiCycle/Modules/ConstantValueGenerator.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 11:49:25 on Jun 05,2022
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/EE/EE446/Lab4/MultiCycle/Modules" D:/EE/EE446/Lab4/MultiCycle/Modules/ConstantValueGenerator.v 
+# -- Compiling module ConstantValueGenerator
+# 
+# Top level modules:
+# 	ConstantValueGenerator
+# End time: 11:49:25 on Jun 05,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/EE/EE446/Lab4/MultiCycle/Modules {D:/EE/EE446/Lab4/MultiCycle/Modules/ALU.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 11:49:25 on Jun 05,2022
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/EE/EE446/Lab4/MultiCycle/Modules" D:/EE/EE446/Lab4/MultiCycle/Modules/ALU.v 
+# -- Compiling module ALU
+# 
+# Top level modules:
+# 	ALU
+# End time: 11:49:25 on Jun 05,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/EE/EE446/Lab4/MultiCycle {D:/EE/EE446/Lab4/MultiCycle/MultiCycleMainFSM.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 11:49:25 on Jun 05,2022
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/EE/EE446/Lab4/MultiCycle" D:/EE/EE446/Lab4/MultiCycle/MultiCycleMainFSM.v 
+# -- Compiling module MultiCycleMainFSM
+# 
+# Top level modules:
+# 	MultiCycleMainFSM
+# End time: 11:49:25 on Jun 05,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/EE/EE446/Lab4/MultiCycle/Modules {D:/EE/EE446/Lab4/MultiCycle/Modules/SyncMemory.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 11:49:25 on Jun 05,2022
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/EE/EE446/Lab4/MultiCycle/Modules" D:/EE/EE446/Lab4/MultiCycle/Modules/SyncMemory.v 
+# -- Compiling module SyncMemory
+# 
+# Top level modules:
+# 	SyncMemory
+# End time: 11:49:25 on Jun 05,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+vlog -work rtl_work -refresh -force_refresh
+# Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 11:53:13 on Jun 05,2022
+# vlog -reportprogress 300 -work rtl_work -refresh -force_refresh 
+# -- Refreshing module FullAdder_O
+# -- Refreshing module MultiCycleController
+# -- Refreshing module Mux16x1
+# -- Refreshing module Mux2x1
+# -- Refreshing module Mux4x1
+# -- Refreshing module Reg_RWE
+# -- Refreshing module RegisterFile
+# -- Refreshing module Shifter
+# End time: 11:53:13 on Jun 05,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -work rtl_work -refresh -force_refresh
+# Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 11:53:13 on Jun 05,2022
+# vcom -reportprogress 300 -work rtl_work -refresh -force_refresh 
+# -- Skipping module FullAdder_O
+# -- Skipping module MultiCycleController
+# -- Skipping module Mux16x1
+# -- Skipping module Mux2x1
+# -- Skipping module Mux4x1
+# -- Skipping module Reg_RWE
+# -- Skipping module RegisterFile
+# -- Skipping module Shifter
+# End time: 11:53:13 on Jun 05,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0

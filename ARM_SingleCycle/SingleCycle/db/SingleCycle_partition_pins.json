@@ -1,0 +1,141 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "Out[31]",
+					"strict" : false
+				},
+				{
+					"name" : "Out[30]",
+					"strict" : false
+				},
+				{
+					"name" : "Out[29]",
+					"strict" : false
+				},
+				{
+					"name" : "Out[28]",
+					"strict" : false
+				},
+				{
+					"name" : "Out[27]",
+					"strict" : false
+				},
+				{
+					"name" : "Out[26]",
+					"strict" : false
+				},
+				{
+					"name" : "Out[25]",
+					"strict" : false
+				},
+				{
+					"name" : "Out[24]",
+					"strict" : false
+				},
+				{
+					"name" : "Out[23]",
+					"strict" : false
+				},
+				{
+					"name" : "Out[22]",
+					"strict" : false
+				},
+				{
+					"name" : "Out[21]",
+					"strict" : false
+				},
+				{
+					"name" : "Out[20]",
+					"strict" : false
+				},
+				{
+					"name" : "Out[19]",
+					"strict" : false
+				},
+				{
+					"name" : "Out[18]",
+					"strict" : false
+				},
+				{
+					"name" : "Out[17]",
+					"strict" : false
+				},
+				{
+					"name" : "Out[16]",
+					"strict" : false
+				},
+				{
+					"name" : "Out[15]",
+					"strict" : false
+				},
+				{
+					"name" : "Out[14]",
+					"strict" : false
+				},
+				{
+					"name" : "Out[13]",
+					"strict" : false
+				},
+				{
+					"name" : "Out[12]",
+					"strict" : false
+				},
+				{
+					"name" : "Out[11]",
+					"strict" : false
+				},
+				{
+					"name" : "Out[10]",
+					"strict" : false
+				},
+				{
+					"name" : "Out[9]",
+					"strict" : false
+				},
+				{
+					"name" : "Out[8]",
+					"strict" : false
+				},
+				{
+					"name" : "Out[7]",
+					"strict" : false
+				},
+				{
+					"name" : "Out[6]",
+					"strict" : false
+				},
+				{
+					"name" : "Out[5]",
+					"strict" : false
+				},
+				{
+					"name" : "Out[4]",
+					"strict" : false
+				},
+				{
+					"name" : "Out[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Out[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Out[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Out[0]",
+					"strict" : false
+				},
+				{
+					"name" : "CLK",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

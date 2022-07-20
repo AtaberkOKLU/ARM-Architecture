@@ -1,0 +1,30 @@
+transcript on
+if {[file exists rtl_work]} {
+	vdel -lib rtl_work -all
+}
+vlib rtl_work
+vmap work rtl_work
+
+vlog -vlog01compat -work work +incdir+D:/EE/EE446/Lab4/MultiCycle/Modules {D:/EE/EE446/Lab4/MultiCycle/Modules/MultiCycleController.v}
+vlog -vlog01compat -work work +incdir+D:/EE/EE446/Lab4/MultiCycle/Modules {D:/EE/EE446/Lab4/MultiCycle/Modules/Shifter.v}
+vlog -vlog01compat -work work +incdir+D:/EE/EE446/Lab4/MultiCycle/Modules {D:/EE/EE446/Lab4/MultiCycle/Modules/Reg_RWE.v}
+vlog -vlog01compat -work work +incdir+D:/EE/EE446/Lab4/MultiCycle/Modules {D:/EE/EE446/Lab4/MultiCycle/Modules/RegisterFile.v}
+vlog -vlog01compat -work work +incdir+D:/EE/EE446/Lab4/MultiCycle/Modules {D:/EE/EE446/Lab4/MultiCycle/Modules/Mux4x1.v}
+vlog -vlog01compat -work work +incdir+D:/EE/EE446/Lab4/MultiCycle/Modules {D:/EE/EE446/Lab4/MultiCycle/Modules/Mux2x1.v}
+vlog -vlog01compat -work work +incdir+D:/EE/EE446/Lab4/MultiCycle/Modules {D:/EE/EE446/Lab4/MultiCycle/Modules/Mux16x1.v}
+vlog -vlog01compat -work work +incdir+D:/EE/EE446/Lab4/MultiCycle/Modules {D:/EE/EE446/Lab4/MultiCycle/Modules/FullAdder_O.v}
+vlog -vlog01compat -work work +incdir+D:/EE/EE446/Lab4/MultiCycle/Modules {D:/EE/EE446/Lab4/MultiCycle/Modules/Extender.v}
+vlog -vlog01compat -work work +incdir+D:/EE/EE446/Lab4/MultiCycle/Modules {D:/EE/EE446/Lab4/MultiCycle/Modules/Decoder4x16_Cond.v}
+vlog -vlog01compat -work work +incdir+D:/EE/EE446/Lab4/MultiCycle/Modules {D:/EE/EE446/Lab4/MultiCycle/Modules/ConstantValueGenerator.v}
+vlog -vlog01compat -work work +incdir+D:/EE/EE446/Lab4/MultiCycle/Modules {D:/EE/EE446/Lab4/MultiCycle/Modules/ALU.v}
+vlog -vlog01compat -work work +incdir+D:/EE/EE446/Lab4/MultiCycle {D:/EE/EE446/Lab4/MultiCycle/MultiCycleMainFSM.v}
+vlog -vlog01compat -work work +incdir+D:/EE/EE446/Lab4/MultiCycle/Modules {D:/EE/EE446/Lab4/MultiCycle/Modules/SyncMemory.v}
+
+vlog -vlog01compat -work work +incdir+D:/EE/EE446/Lab4/MultiCycle {D:/EE/EE446/Lab4/MultiCycle/MultiCycle_tb.v}
+
+vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  MultiCycle
+
+add wave *
+view structure
+view signals
+run -all

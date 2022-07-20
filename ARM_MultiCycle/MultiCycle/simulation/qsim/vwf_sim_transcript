@@ -1,0 +1,311 @@
+Determining the location of the ModelSim executable...
+
+Using: C:/intelFPGA_lite/21.1/questa_fse/win64
+
+To specify a ModelSim executable directory, select: Tools -> Options -> EDA Tool Options
+Note: if both Questa Intel FPGA Edition and ModelSim executables are available, Questa Intel FPGA Edition will be used.
+
+**** Generating the ModelSim Testbench ****
+
+quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off MultiCycle -c MultiCycle --vector_source="D:/EE/EE446/Lab4/MultiCycle/Waveform.vwf" --testbench_file="D:/EE/EE446/Lab4/MultiCycle/simulation/qsim/Waveform.vwf.vt"
+
+Info: *******************************************************************
+Info: Running Quartus Prime EDA Netlist Writer
+    Info: Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
+    Info: Copyright (C) 2021  Intel Corporation. All rights reserved.
+    Info: Your use of Intel Corporation's design tools, logic functions 
+    Info: and other software and tools, and any partner logic 
+    Info: functions, and any output files from any of the foregoing 
+    Info: (including device programming or simulation files), and any 
+    Info: associated documentation or information are expressly subject 
+    Info: to the terms and conditions of the Intel Program License 
+    Info: Subscription Agreement, the Intel Quartus Prime License Agreement,
+    Info: the Intel FPGA IP License Agreement, or other applicable license
+    Info: agreement, including, without limitation, that your use is for
+    Info: the sole purpose of programming logic devices manufactured by
+    Info: Intel and sold by Intel or its authorized distributors.  Please
+    Info: refer to the applicable agreement for further details, at
+    Info: https://fpgasoftware.intel.com/eula.
+    Info: Processing started: Thu May 26 16:42:43 2022
+Info: Command: quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off MultiCycle -c MultiCycle --vector_source=D:/EE/EE446/Lab4/MultiCycle/Waveform.vwf --testbench_file=D:/EE/EE446/Lab4/MultiCycle/simulation/qsim/Waveform.vwf.vt
+Info (119006): Selected device EP4CE22F17C6 for design "MultiCycle"
+
+ test bench files
+
+gnoring output pin "Instruct[1]" in vector source file when writing test bench files
+
+Completed successfully. 
+
+Completed successfully. 
+
+**** Generating the functional simulation netlist ****
+
+quartus_eda --write_settings_files=off --simulation --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory="D:/EE/EE446/Lab4/MultiCycle/simulation/qsim/" MultiCycle -c MultiCycle
+
+Info: *******************************************************************
+Info: Running Quartus Prime EDA Netlist Writer
+    Info: Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
+    Info: Copyright (C) 2021  Intel Corporation. All rights reserved.
+    Info: Your use of Intel Corporation's design tools, logic functions 
+    Info: and other software and tools, and any partner logic 
+    Info: functions, and any output files from any of the foregoing 
+    Info: (including device programming or simulation files), and any 
+    Info: associated documentation or information are expressly subject 
+    Info: to the terms and conditions of the Intel Program License 
+    Info: Subscription Agreement, the Intel Quartus Prime License Agreement,
+    Info: the Intel FPGA IP License Agreement, or other applicable license
+    Info: agreement, including, without limitation, that your use is for
+    Info: the sole purpose of programming logic devices manufactured by
+    Info: Intel and sold by Intel or its authorized distributors.  Please
+    Info: refer to the applicable agreement for further details, at
+    Info: https://fpgasoftware.intel.com/eula.
+    Info: Processing started: Thu May 26 16:42:45 2022
+Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory=D:/EE/EE446/Lab4/MultiCycle/simulation/qsim/ MultiCycle -c MultiCycle
+Info (119006): Selected device EP4CE22F17C6 for design "MultiCycle"
+Info (204019): Generated file MultiCycle.vo in folder "D:/EE/EE446/Lab4/MultiCycle/simulation/qsim//" for EDA simulation tool
+Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 4662 megabytes
+    Info: Processing ended: Thu May 26 16:42:48 2022
+    Info: Elapsed time: 00:00:03
+    Info: Total CPU time (on all processors): 00:00:02
+
+Completed successfully. 
+
+**** Generating the ModelSim .do script ****
+
+D:/EE/EE446/Lab4/MultiCycle/simulation/qsim/MultiCycle.do generated.
+
+Completed successfully. 
+
+**** Running the ModelSim simulation ****
+
+C:/intelFPGA_lite/21.1/questa_fse/win64/vsim -c -do MultiCycle.do
+
+Reading pref.tcl
+
+
+# 2021.2
+
+
+# do MultiCycle.do
+
+# ** Warning: (vlib-34) Library already exists at "work".
+
+# Errors: 0, Warnings: 1
+
+# Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+
+# Start time: 16:42:50 on May 26,2022
+
+# vlog -work work MultiCycle.vo 
+
+# -- Compiling module MultiCycle
+
+# 
+
+# Top level modules:
+# 	MultiCycle
+
+# End time: 16:42:51 on May 26,2022, Elapsed time: 0:00:01
+
+# Errors: 0, Warnings: 0
+
+# Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+
+# Start time: 16:42:51 on May 26,2022
+
+# vlog -work work Waveform.vwf.vt 
+
+# -- Compiling module MultiCycle_vlg_vec_tst
+
+# 
+
+# Top level modules:
+# 	MultiCycle_vlg_vec_tst
+
+# End time: 16:42:51 on May 26,2022, Elapsed time: 0:00:00
+
+# Errors: 0, Warnings: 0
+
+# vsim -c -t 1ps -L cycloneive_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.MultiCycle_vlg_vec_tst 
+# Start time: 16:42:51 on May 26,2022
+# ** Note: (vsim-3812) Design is being optimized...
+
+# //  Questa Intel Starter FPGA Edition-64
+# //  Version 2021.2 win64 Apr 14 2021
+# //
+# //  Copyright 1991-2021 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+
+# Loading work.MultiCycle_vlg_vec_tst(fast)
+
+# ** UI-Msg (suppressible): (vsim-3561) No objects found matching '*'.
+
+# ** UI-Msg (suppressible): (vsim-3561) No objects found matching '*'.
+
+# after#30
+
+# ** Note: $finish    : Waveform.vwf.vt(49)
+#    Time: 1 us  Iteration: 0  Instance: /MultiCycle_vlg_vec_tst
+
+# End time: 16:43:00 on May 26,2022, Elapsed time: 0:00:09
+# Errors: 0, Warnings: 0
+
+Completed successfully. 
+
+**** Converting ModelSim VCD to vector waveform ****
+
+Reading D:/EE/EE446/Lab4/MultiCycle/Waveform.vwf...
+
+Reading D:/EE/EE446/Lab4/MultiCycle/simulation/qsim/MultiCycle.msim.vcd...
+
+Processing channel transitions... 
+
+Warning: CLK - signal not found in VCD.
+
+Warning: Instruct[31] - signal not found in VCD.
+
+Warning: Instruct[30] - signal not found in VCD.
+
+Warning: Instruct[29] - signal not found in VCD.
+
+Warning: Instruct[28] - signal not found in VCD.
+
+Warning: Instruct[27] - signal not found in VCD.
+
+Warning: Instruct[26] - signal not found in VCD.
+
+Warning: Instruct[25] - signal not found in VCD.
+
+Warning: Instruct[24] - signal not found in VCD.
+
+Warning: Instruct[23] - signal not found in VCD.
+
+Warning: Instruct[22] - signal not found in VCD.
+
+Warning: Instruct[21] - signal not found in VCD.
+
+Warning: Instruct[20] - signal not found in VCD.
+
+Warning: Instruct[19] - signal not found in VCD.
+
+Warning: Instruct[18] - signal not found in VCD.
+
+Warning: Instruct[17] - signal not found in VCD.
+
+Warning: Instruct[16] - signal not found in VCD.
+
+Warning: Instruct[15] - signal not found in VCD.
+
+Warning: Instruct[14] - signal not found in VCD.
+
+Warning: Instruct[13] - signal not found in VCD.
+
+Warning: Instruct[12] - signal not found in VCD.
+
+Warning: Instruct[11] - signal not found in VCD.
+
+Warning: Instruct[10] - signal not found in VCD.
+
+Warning: Instruct[9] - signal not found in VCD.
+
+Warning: Instruct[8] - signal not found in VCD.
+
+Warning: Instruct[7] - signal not found in VCD.
+
+Warning: Instruct[6] - signal not found in VCD.
+
+Warning: Instruct[5] - signal not found in VCD.
+
+Warning: Instruct[4] - signal not found in VCD.
+
+Warning: Instruct[3] - signal not found in VCD.
+
+Warning: Instruct[2] - signal not found in VCD.
+
+Warning: Instruct[1] - signal not found in VCD.
+
+Warning: Instruct[0] - signal not found in VCD.
+
+Warning: RESET_N - signal not found in VCD.
+
+Warning: Result[31] - signal not found in VCD.
+
+Warning: Result[30] - signal not found in VCD.
+
+Warning: Result[29] - signal not found in VCD.
+
+Warning: Result[28] - signal not found in VCD.
+
+Warning: Result[27] - signal not found in VCD.
+
+Warning: Result[26] - signal not found in VCD.
+
+Warning: Result[25] - signal not found in VCD.
+
+Warning: Result[24] - signal not found in VCD.
+
+Warning: Result[23] - signal not found in VCD.
+
+Warning: Result[22] - signal not found in VCD.
+
+Warning: Result[21] - signal not found in VCD.
+
+Warning: Result[20] - signal not found in VCD.
+
+Warning: Result[19] - signal not found in VCD.
+
+Warning: Result[18] - signal not found in VCD.
+
+Warning: Result[17] - signal not found in VCD.
+
+Warning: Result[16] - signal not found in VCD.
+
+Warning: Result[15] - signal not found in VCD.
+
+Warning: Result[14] - signal not found in VCD.
+
+Warning: Result[13] - signal not found in VCD.
+
+Warning: Result[12] - signal not found in VCD.
+
+Warning: Result[11] - signal not found in VCD.
+
+Warning: Result[10] - signal not found in VCD.
+
+Warning: Result[9] - signal not found in VCD.
+
+Warning: Result[8] - signal not found in VCD.
+
+Warning: Result[7] - signal not found in VCD.
+
+Warning: Result[6] - signal not found in VCD.
+
+Warning: Result[5] - signal not found in VCD.
+
+Warning: Result[4] - signal not found in VCD.
+
+Warning: Result[3] - signal not found in VCD.
+
+Warning: Result[2] - signal not found in VCD.
+
+Warning: Result[1] - signal not found in VCD.
+
+Warning: Result[0] - signal not found in VCD.
+
+Writing the resulting VWF to D:/EE/EE446/Lab4/MultiCycle/simulation/qsim/MultiCycle_20220526164301.sim.vwf
+
+Finished VCD to VWF conversion.
+
+Completed successfully. 
+
+All completed.

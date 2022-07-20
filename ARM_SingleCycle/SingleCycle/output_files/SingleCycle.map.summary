@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Wed May 11 18:47:10 2022
+Quartus Prime Version : 21.1.0 Build 842 10/21/2021 SJ Lite Edition
+Revision Name : SingleCycle
+Top-level Entity Name : SingleCycle
+Family : Cyclone IV E
+Total logic elements : 2,544
+    Total combinational functions : 1,323
+    Dedicated logic registers : 1,286
+Total registers : 1286
+Total pins : 33
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

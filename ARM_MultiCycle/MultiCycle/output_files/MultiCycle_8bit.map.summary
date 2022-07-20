@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Sat Jun  4 17:47:10 2022
+Quartus Prime Version : 21.1.0 Build 842 10/21/2021 SJ Lite Edition
+Revision Name : MultiCycle_8bit
+Top-level Entity Name : MultiCycle
+Family : Cyclone IV E
+Total logic elements : 1,152
+    Total combinational functions : 807
+    Dedicated logic registers : 440
+Total registers : 440
+Total pins : 10
+Total virtual pins : 0
+Total memory bits : 768
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

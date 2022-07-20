@@ -1,0 +1,15 @@
+module SingleCycleController (
+	input 	wire [3:0] 	Rd,
+	input 	wire [1:0] 	Op,
+	input 	wire [5:0] 	Func,
+	output 	reg  			PCS,
+	output 	reg  			RegW,
+	output 	reg  			MemW,
+	output 	reg  			Mem2Reg,
+	output 	reg  			ALUSrc,
+	output 	reg  [1:0]	ImmSrc,
+	output 	reg  [1:0]	RegSrc,
+	output 	reg  [1:0]	ALUControl,
+	output 	reg  [1:0]	FlagW
+	
+);

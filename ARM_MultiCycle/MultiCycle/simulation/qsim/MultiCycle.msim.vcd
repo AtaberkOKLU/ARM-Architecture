@@ -1,0 +1,14 @@
+$comment
+	File created using the following command:
+		vcd file MultiCycle.msim.vcd -direction
+$end
+$date
+	Thu May 26 16:43:00 2022
+$end
+$version
+	Questa Intel Starter FPGA Edition Version 2021.2
+$end
+$timescale
+	1ps
+$end
+#1000000

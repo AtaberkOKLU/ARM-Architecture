@@ -1,0 +1,32 @@
+MOV R0, #0xAE
+// R0: Input, R1: Output
+ANDS R1, R0, #1	
+BEQ #36
+MOV R2, R0, LSR #4
+AND R2, #0x0F
+MOV R3, R0, LSL #4
+AND R3, #0xF0
+ORR R1, R2, R3
+B #44
+MOV R1, R0, LSL #2
+AND R1, #0x70
+B #44
+
+
+// MOV R0, #5
+// SUB R0, R1, R0
+
+MOV R0, #31
+LDR R1, [R0]
+SUB R0, R0, #1
+LDR R2, [R0]
+ADD R1, R1, R2
+SUB R0, R0, #1
+LDR R2, [R0]
+ADD R1, R1, R2
+SUB R0, R0, #1
+LDR R2, [R0]
+ADD R1, R1, R2
+SUB R0, R0, #1
+LDR R2, [R0]
+ADD R1, R1, R2

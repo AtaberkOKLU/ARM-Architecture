@@ -1,0 +1,19 @@
+mov r0, #0				E3A00000			R0 : 0 
+add r2, r0, #5	   	E2802005			R2 : 5
+add r3, r0, #7    	E2803007			R3 : 7
+sub r0, r3, #4    	E2430004			R0 : 3
+orr r1, r3, r0    	E1831000			R1 : 7
+subs r1, r1, r3   	E0511003			R1 : 0
+bleq #0x20        	0B000000			PC : PC +2 +0 | LR : 7
+add r0, r0, #1    	E2800001			SKIPPED
+lsr r0, r0, #1    	E1A000A0			R0 : 1
+lsl r0, r0, #2    	E1A00100			R0 : 4
+ror r3, r3, #1    	E1A030E3			R3 : -#
+asrs r3, r3, #1    	E1B030C3			R3 : -#/2
+movpl PC,LR				51A0F00E			No Exec. PC : 7 (LR)
+mov r1, #1				E3A01001			R1 : 1
+movs r0, r1, LSL #1 	E1B00081			R0 : 2
+mov r1, #0x1f     	E3A0101F			R1 : MemLoc (End)
+str r0, [r1]      	E5810000			R0 : 2 -> 31
+ldr r1, [r1]      	E5911000			R1 : 2 <- 31
+b	#0					 	EAFFFFEC 		PC : PC +2 -20
